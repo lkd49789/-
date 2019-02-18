@@ -1,0 +1,65 @@
+创建对象
+创建一个对象，然后给这个对象新建属性和方法。
+var box = new Object();   //创建一个 Object对象
+
+box.name = 'Lee';//创建一个 name属性并赋值
+
+box.age = 100;//创建一个 age属性并赋值
+
+box.run = function () {//创建一个 run()方法并返回值
+	return this.name + this.age + '运行中...';
+};
+
+alert(box.run());//输出属性和方法的值
+
+工厂模式
+function createObject(name, age) { //集中实例化的函数
+
+  var obj = new Object();
+
+　　obj.name = name;
+
+　　obj.age = age;
+
+   　　 obj.run = function () {
+
+   　　　　 return this.name + this.age + '运行中...';
+
+　　　　};
+
+　　return obj;
+
+}
+var box1 = createObject('Lee', 100);//第一个实例
+
+var box2 =createObject('Jack',200);//第二个实例
+
+alert(box1.run());   //Lee100运行中...
+
+alert(box2.run());   //Jack200运行中...
+
+ECMAScript中可以采用构造函数(构造方法)可用来创建特定的对象
+function Box(name, age) {//构造函数模式
+
+this.name = name;
+
+this.age = age;
+
+　　this.run = function () {
+
+　　return this.name + this.age + '运行中...';
+
+　　};
+
+}
+var box1 = new Box('Lee', 100);
+alert(box1.run());
+
+原型
+function Box() {} //声明一个构造函数
+Box.prototype.name = 'Lee'; //在原型里添加属性
+Box.prototype.age = 100;
+Box.prototype.run = function () { //在原型里添加方法
+return this.name + this.age + '运行中...';
+};
+var box2 = new Box();

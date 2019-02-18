@@ -1,0 +1,15 @@
+<div class="zxf_pagediv"></div>	
+js
+$(".zxf_pagediv").createPage({
+					pageNum: Math.ceil(data.listsize/10),//总页码
+					current: Number(pageindex),//当前页
+					shownum: 10,//每页显示个数
+					// activepage: "",//当前页选中样式
+					activepaf: "",//下一页选中样式
+					backfun: function(e) {
+						// console.log(e);//回调
+						$(".warting").removeClass("active");
+						$("tbody").html("");
+						var pageindex = e.current;
+					}
+				});

@@ -1,0 +1,543 @@
+我已经过了餐桌上有只鸡就一定能吃到鸡腿的年纪.
+
+http://coolaf.com/ 接口测试
+https://www.showdoc.cc/web/#/ 接口文档编写
+http://open.thunderurl.com/#/ 迅雷下载
+background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.14902) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.14902) 50%, rgba(255, 255, 255, 0.14902) 75%, transparent 75%, transparent);
+		background-size: 40px 40px;
+onselectstart="return false"禁止选中
+oncontextmenu=self.event.returnValue=false 禁止右键
+writing-mode: vertical-lr 垂直排列
+3e2，是计算机表示方法，就是3x10^2
+ES6 export   export.default   import
+/*获取图片实际宽高*/
+function getImageWidth(url,callback){
+	var img = new Image();
+	img.src = url;
+	if(img.complete){
+		callback(img.width, img.height);
+	}else{
+		img.onload = function(){
+			callback(img.width, img.height);
+		}
+	}
+}
+var width;
+$(function(){
+/*调用*/
+	var imgSrc = $(".img").attr("src");
+	getImageWidth(imgSrc,function(w,h){
+		width = w;
+	});
+});
+/*表格头部固定 tbody加滚动条 +display：block*/ td设置宽度
+table thead,tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+ie 地址栏传值不能有中文  进行编码传至
+encodeURIComponent(值)编码
+decodeURIComponent(值)解码
+ajax上传文件
+cache: false,//上传文件无需缓存
+processData: false,//用于对data参数进行序列化处理 这里必须false
+contentType: false, //必须
+父级设置这个 子级垂直居中
+display:flex;
+justify-content:space-around;
+
+flex-direction:column;
+
+
+a标签的target="_blank"属性  值有
+jQuery.isEmptyObject
+javascript:history.back(-1)
+<meta name="author" content="dashen" /> 	标注网页的作者
+<meta name="Keywords" content="查询"/>  页面关键词，用于被搜索引擎收录
+<meta name="description" content="新闻中心,包含有时政新闻">  页面描述，用于搜索引擎收录
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  UTF-8时，代表世界通用的语言编码；
+PS：html5页面的做法是直接使用<meta charset="utf-8"/>
+<meta name="robots" content="all">   all：文件将被检索，且页面上的链接可以被查询；
+<meta name="format-detection" content="telephone=no" />  telephone=no就禁止了把数字转化为拨号链接！
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+IE=edge告诉IE使用最新的引擎渲染网页，chrome=1则可以激活Chrome Frame.
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />  
+手机顶部导航栏颜色 default（白色），可以定为black（黑色）和black-translucent（灰色半透明）
+<meta name="apple-mobile-web-app-capable" content="yes" />删除默认的苹果工具栏和菜单栏 默认显示
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no"/>
+width=device-width 可视区域的宽度，值可为数字或关键词device-width 
+initial-scale 设置页面的初始缩放值，为一个数字，可以带小数
+maximum-scale=1.0, minimum-scale=1.0;允许用户的最大,最小缩放值，为一个数字，可以带小数
+user-scalable  是否允许用户进行缩放，值为"no"或"yes", no 代表不允许，yes代表允许
+
+
+<!--[if lte IE 6]>
+<![endif]-->
+lte：就是Less than or equal to的简写，也就是小于或等于的意思。
+lt ：就是Less than的简写，也就是小于的意思。
+gte：就是Greater than or equal to的简写，也就是大于或等于的意思。
+gt ：就是Greater than的简写，也就是大于的意思。
+! ： 就是不等于的意思，跟javascript里的不等于判断符相同
+
+2.例举3种强制类型转换和2种隐式类型转换？
+强制（parseInt,parseFloat,number）
+隐式（==  ===）
+0xffffff
+1.函数声明
+function sum1(n1,n2){
+    return n1+n2;
+  };
+2.函数表达式，又叫函数字面量
+var sum2=function(n1,n2){
+    return n1+n2;
+};
+3.函数构造法，参数必须加引号  
+var sum3=new Function('n1','n2','return n1+n2');
+console.log(sum3(2,3));//5
+
+
+toString（16）  转化为16进制的字符串  为空时转化为字符串
+.subString（0，3）提取字符串中下标0到3的
+如果一个方法属于摸个对象， 对象.方法名（）
+\转意字符 显示符号本身的意思
+position：absolute
+          relative
+          fixed
+select  option  下拉列表
+outline: none;  去掉input选中框
+border-radius: 0px 0 8px 8px;  弧度
+list-style:square  方块
+vertical-align:middle  img  应用于inline属性的标签
+不支持js<noscript></noscript>
+var a = 10； var定义变量  赋值符号=
+== 值相等 类型不一定 
+===全等 值相等 类型也相等
+'字符串'  string   
+数字类型：number  
+boolean类型只有两个值 为真true(1) 为假false(0)
+undefined 只有一个值undefined  代表变量定义了 但是没有赋值  反馈undefined
+null     只有一个值null      
+function 函数名(){}     函数名()调用函数  否则不会执行
+
+typeof  关键字判断定义的类型
+
+对象.属性名 = 属性值
+对象.方法名 = function（）{
+字符串拼接：
+       先写正常的字符串 字符串里面包含一个变化的值
+       改变这个在变化的值
+        '+变化的量+'
+
+ var a=Math.floor(Math.random()*100000)  5位以内的随机数
+ var b=String(a)     把a转化为字符串
+       
+document.write（'内容')  在页面中显示内容                                
+window.alert(内容) 在页面中弹出一个只有确定按钮的框
+window.prompt('请输入成绩'，'输入框内显示的内容')   确定or取消
+        prompt(参数1，参数2)
+        参数1：对话框的题目 参数2：对话框内的显示的提示文字
+        有反馈值：和点击的按钮有关，点击确定按钮反馈输入的值 取消反馈null
+window.confirm('提示文字')          确定or取消
+               反馈值  确定  反馈true
+                       取消   反馈false
+
+
+document.writeln是重启一行写入！即写完后光标移到下一行！
+document.write是直接在后面追加内容！不换行！ 
+parseInt取整数 
+parseFloat
+--i 先自己减
+i--先引用 在自己减
+break 结束循环执行下面的。
+continue 跳过符合条件的循环。
+if  else
+switch(n){
+    case 1:
+        执行代码块 1
+        break;
+    case 2:
+        执行代码块 2
+        break;
+    default:
+        与 case 1 和 case 2 不同时执行的代码
+}
+
+对象  js里面的事物全是对象  方法  对象执行的动作  属性  对象的属性
+
+循环
+
+do{}  while()   无论条件是否满足 都会先执行一次  
+直接执行do里面的循环体 去判断语句 true继续 false    
+
+while(判断){} 先去判断条件语句  为true时执行  false直接跳出循环 执行下面的
+
+
+for(var i=1;i<100;i++){}  在循环体内结束循环  出现死循环可以用 break结束  跳出整个循环体  
+                                                             continue结束本次循环 进行下一次循环
+表格 rows[0]  第一行  cells[0] 第一列  先行后列
+
+函数
+参数一一对应进行专递  实参小于形参  形参默认以undefined  实参大于形参  自动忽略多出的实参
+return 返回值  后面的语句不会执行  没有返回值时默认返回undefind 一般return放在最后
+数值.toFixed（2) 保留小数点2为
+var a=Math.round（3.5）   4  四舍五入
+          .ceil（3.4）    4  向上取整
+          .floor（3.9）   3  向下取整
+          .max（3，4，5）  5  取最大
+          .mix （3，4，5） 3
+          .pow（2，4）    16 x的y次幂
+          .sqrt（16）      x的开平方
+          .abs    绝对值
+Math.random（）产生0-1随机数 不能取到1
+arguments.length实参长度   0 1 2 3 4
+arguments[0] 调用第一个实参
+
+数组方法
+array.length数组名.长度
+
+for in
+数组时 index in arr   json对象格式时  输出index json字符串
+for of
+数组时 value of arr   json对象格式时  输出value  json字符串
+
+
+数组对象.forEach(function(item, index，参数3){
+        		})
+        		参数3：所在的数组  可选
+
+图片上添加东西
+<img src="planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
+
+<map name="planetmap" id="planetmap">
+  <area shape="circle" coords="180,139,14" href ="venus.html" alt="Venus" />
+  <area shape="circle" coords="129,161,10" href ="mercur.html" alt="Mercury" />
+  <area shape="rect" coords="0,0,110,260" href ="sun.html" alt="Sun" />
+</map>
+
+
+数组对象.reverse()   直接将原有数组反转
+.join('参数') 返回值    把数组中的所有元素值用逗号链接   参数是链接符  参数可有可无  无时默认逗号
+.concat(参数)   返回值    创建一个新的数组加上参数(也可以是数组，把数组中的值链接进来)  原有数组不变
+.slice()返回值参数1(必选) 参数2  截取参数1到参数2的值 下标  负值  最右边开始 -1开始  不包括参数2的值  输出截取的值
+.splice(下标，个数，添加值1，添加值2.....) 返回值 参数1添加删除的位置 2删除的个数 不删就0 3添加的值
+        返回值是删除的数组  原数组改变成剩下的
+.indexOf()  返回值  indexOf从数组下标0开始查找数组中的值  找到返回下标值 当数组中没有查找的值 就返回-1
+.lastindexOf() 返回值  从后往前找 返回的还是原下标值0
+
+
+.push()返回值 在数组最后添加值   返回值是数组添加完后的长度  原数组发生改变
+.pop(无)   截取数组中最后一个元素 返回值是截取数组中的最后的一个元素 原数组发生改变
+unshift() 在数组最前面添加值   返回值数组添加完后的长度 原数组被改变
+.shift(无)   在数组的最前面截取一个值  返回值就是截取的值  原数组被改变
+.sort()     a-b 比较  小于0  item1在2前面  大于0 item2在1前面
+var arr = [3,5,2,7,9,10,1];
+        var a = arr.sort(fn);
+        function fn(a,b){
+        	return a-b;升序
+        }。
+
+        console.log(a);
+
+//数组对象方法排序:
+1.如果是数字排序
+data.sort(fn);
+function fn(a,b){
+        return a.number-b.number;升序
+}
+2.如果是字母排序 A-Z
+stringObject.localeCompare(target)  stringObject和target比较
+中用的是英语，则是根据字母排序的。如果有用到汉字则是根据汉字拼音来排序
+data.sort(fn);
+function fn(a,b){
+	return a[3].substring(0,1).localeCompare(b[3].substring(0,1));/*选择对应的英文截取第一位字母进行排序*/
+}
+
+
+
+字符串对象
+字符串加数字等于字符串拼接  减字符串等于数字的运算
+var a=new String（）
+字符串对象.charAt（index） index 下标 若大于长度 或负值 就返回空的字符串 返回指定位置的字符
+字符串对象.[index]
+         .charCodeAt(index) 返回对应位置字符的字符编码 若大于长度 或负值 就返回NaN
+字符串对象.indexOf(参数1，参数2) 查找子字符串 返回值 从头开始开始查找 找到的在原来字符串中的下标位置，2从参数二的位置开始匹配 找                                 不到就返回-1 找到了就返回该字符在原字符中的下标
+          .lastIndexOf(1，2) 从尾部开始   类似于indexOf  2，从参数2给的下标开始查找 从后往前查找
+          .search()类似indexOf  /o/i不分大小写       正则  /o/g 全局  找到返回下标结束只找一个 否-1  
+正则拼接变量    var a='AsdFgh'
+		var b='sdfg'
+		var reg = new RegExp(b,'i');
+		console.log(a.search(reg))
+
+          .match（）    匹配到返回匹配到的 是个数组 否null        正则
+          .replace(1,2)1将要替换的字符串  2替换成此字符串 替换成功 返回替换后的 替换失败返回原字符串 源字符串在替换后不变 从头替                          换第一个匹配的     正则
+          .substring（start，end） 截取1到2的值  不包含2 任何一个参数为负数被替换为0 相同时为空
+          .substr（start，个数）   1 开始截取的位置  2截取的个数 负数  -4 倒数4开始往后 开始 start大于等于length时 返回空字符串 源字符串不变
+          .slice（1，2）  1开始截取的位置 2截取到的下标位置 不包含2 -1
+          .split（'分隔符'，长度）如果没有分隔符 吧字符串作为一个整体放在数组中，如果是空格分隔符会把字符串单个分开放在数组中
+                                  2长度返回值的长度  返回值被分隔符分割的数组 12都是可选的
+          .toUpperCase（）没有参数 返回值字符串  把源字符串全部变成大写的 源字符串不变
+          .toLowerCase（）                                        小写
+
+var a=new Date(时间戳)
+document.write(a.toLocaleString())把时间转换 
+toLocaleDateString();光转年月日
+toLocaleTimeString();光转时分秒
+console.log.(a.getTime())       时间转化为毫秒
+
+console.log(a.getFullYear())       年
+console.log(a.getUTCFullYear())   国际年份
+console.log(a.getMonth())       月 0-11
+console.log(a.getUTCMonth())   国际月份
+console.log(a.getDate())       日子
+console.log(a.getUTCDate())    国际日期
+
+console.log(a.getHours())        几点
+console.log(a.getUTCHours())    国际几点
+console.log(a.getMinutes())       几分.
+console.log(a.getUTCMinutes())    国际积分
+              getseconds（）       秒
+              getUTCseconds
+              getMiIIiseconds        毫秒
+              getUTCMiIIiseconds
+              getDay         星期几     0-6
+              getUTCDay     
+function getMyDate(str){  
+            var oDate = new Date(str),  
+            oYear = oDate.getFullYear(),  
+            oMonth = oDate.getMonth()+1,  
+            oDay = oDate.getDate(),  
+            oHour = oDate.getHours(),  
+            oMin = oDate.getMinutes(),  
+            oSen = oDate.getSeconds(),  
+            oTime = oYear +'-'+ getzf(oMonth) +'-'+ getzf(oDay) +' '+ getzf(oHour) +':'+ getzf(oMin) +':'+getzf(oSen);//最后拼接时间  
+            return oTime;  
+        }; 
+ getNamedItem
+BOM
+window.setTimeout(1,2)  1 回掉时间，要执行的函数 2时间 单位ms 单数不需要明确的写出 当达到参数2时去执行回掉函数
+                        返回值是一个number的数字 每定义一个，9返回一个不同于其他定时器的值
+                         定义：window.setTimeout(匿名函数，参数) 
+
+                               window.setTimeout(函数名不加括号，参数）
+                               window.setTimeout('命令',参数） 
+window.setInterval(1,2) 1要执行的回掉函数 2时间 每隔一段时间那去循环执行回掉函数内的功能
+clearTimeout()   在setTimeout函数执行前结束函数
+cleatInterval
+window.onload=function(){}  入口函数 1当页面全部加载完毕才加载里面的  2有且只有一个
+对象.onclick=function（）{}点击时
+window对象.onscroll=    滚动条滚动时触发
+window.onscroll=function（）{
+document.body.scrollTop 垂直滚动条距离顶部的距离 谷歌的
+document.documentElement.scrollTop;  火狐的                       火狐的||谷歌的
+}
+
+
+window.getElementById('id').onclick=function(){}
+document.body.innerHTML=date.toLocaleString()
+var a =window.open('18demo.html','baidu','width=200,height=200,top=100,left=100');打开网页
+javascript:window.opener=null;window.open('','_self');window.close(); 不弹框 直接关闭
+a.close()关闭你上面打开的网页
+location.href='https://www.baidu.com/'  直接加载到百度网页
+location.assign=（'https://www.baidu.com/'）  跳转到百度 可以返回
+location.replace=('https://www.baidu.com/')  跳转到被堵 历史数据被替换 无法返回
+location.reload(true)  刷新
+navigator 浏览器信息
+appname浏览器名字
+window.screenLeft  浏览器左边的距离   screenX火狐的
+window.screentop 浏览器上边的距离      screenY火狐
+window.innerwidth  浏览器可视区大小
+       innerheight  不包含浏览器菜单那一部分
+       outerwidth   浏览器大小
+       outerheight
+document.body.clientWidth  浏览器可视区的宽度(不包含滚动条)
+                               Height
+网页可见区域宽： document.body.clientWidth; 
+网页可见区域高： document.body.clientHeight; 
+网页可见区域高： document.body.offsetWidth;  //包括边线的宽
+网页可见区域高： document.body.offsetHeight; //包括边线的宽
+网页正文全文宽： document.body.scrollWidth; 
+网页正文全文高： document.body.scrollHeight; 
+网页被卷去的高： document.body.scrollTop;
+网页被卷去的左： document.body.scrollLeft;
+网页正文部分上： window.screenTop; 
+网页正文部分左： window.screenLeft; 
+屏幕分辨率的高： window.screen.height;
+屏幕分辨率的宽： window.screen.width;
+屏幕可用工作区高度： window.screen.availHeight; 
+屏幕可用工作区宽度： window.screen.availWidth;
+判断滚动条是否到底scrollTop()>=$(document).height()-$(window).height() 
+滚动地距离>=文档高度减去可视区高度
+screen.width  屏幕分辨率
+       height
+window.open('网址'，名，高，宽)
+window.close()  关闭网页
+
+function changeURLArg(url,arg){
+            for(var i=0;i<arg.length;i++){
+                var pattern=arg[i].name+'=([^&]*)';
+                var replaceText=arg[i].name+'='+arg[i].value;
+                if(url.match(pattern)){
+                    var tmp='/('+ arg[i].name+'=)([^&]*)/gi';
+                    url=url.replace(eval(tmp),replaceText);
+                }else{
+                    if(url.match('[\?]')){
+                        url = url+'&'+replaceText;
+                    }else{
+                        url = url+'?'+replaceText;
+                    }
+                }
+            }
+            return url
+}
+history.replaceState(null,null,changeURLArg(
+                window.location.href,
+                [
+                    { name:'v',value:2013},
+                    { name:'g',value:123},
+                    { name:'h',value:1333},
+                ]
+            ))
+地址栏替换参数添加参数
+
+DOM
+document.getElementById('ID') 
+document.getElementsByName ('name属性') 数组                     
+doucment.getElementsByTagName('标签名') 数组                       
+doucment.getElementsByClassName('class属性') 数组                     
+doucment.querySelector('li')返回第一个
+documeent.querySelectorAll('li')数组
+document.documentElement   html这个标签的
+document.body body这个标签的
+
+不包含文本
+父级节点.children   子元素节点
+父级节点.firstElementChild 获取第一个子节点 
+父级节点.lastElementChild 获取最后一个子节点 
+子节点.previousElementSibling 子节点的前兄弟节点  
+子节点.nextElementSibling 子节点的后兄弟节点 
+子节点.parentNode  子节点的父级节点
+
+包含文本
+父级节点.childNodes 子元素节点+文本节点
+父级节点.firstChild 获取第一个子节点 
+父级节点.lastChild 获取最后一个子节点 
+子节点.previousSibling 子节点的前兄弟节点 
+子节点.nextSibling 子节点的后兄弟节点 
+
+var b=document.createElement（'标签'）  创建一个元素节点
+var a=doucment.createTextNode（'文本内容'） 创建一个文本节点
+父级元素.appendChild（a）   把文本节点插入到标签中  插在最后
+document.body.appendChild（b） 插入到body中
+父级元素.insertBefore（新插入的节点，要插入的位置）插入到谁的前面
+父级节点.removeChild(要删除的子节点)  删除
+父级元素.replaceChild(新的节点,被替换的节点) 替换节点
+要复制的节点.cloneNode（true|fasle） true包含复制内容 false只复制节点
+
+
+节点.nodeType 返回节点类型 
+节点.attributes 获取元素的所有属性名 数组
+元素.getAttribute（'属性名'）取得该元素属性名的属性值
+元素.setAttribute（'class','one'）把class的值改成one  
+元素.removeAttribute（'属性名'）  删除该元素上的该属性
+节点.classList.add(class名)添加class
+节点.classList.remove(class名)删除class
+
+list.attributes.getNamedItem('id')  id='什么'
+
+节点     nodeType   nodeName      nodeValue
+元素节点  1            标签大写     null
+属性节点  2           属性名(id)    属性值(list)    id='list'
+文本节点  3           #text         值
+1. .tagName 属性    返回标签名字
+2. .innerHTML 属性  一个元素内部所有的东西   可读可写 
+3. .outerHTML 属性 包含元素本身以及元素内部所有的东西 可读可写
+4. .id 属性 得到给元素的id
+5. .className  获得元素的class值
+
+div.currentStyle?div.currentStyle:window.getComputedStyle(div)  兼容性
+window.getComputedStyle(div).height 获得指定div盒子的高度     高版本浏览器支持  火狐和谷歌
+       cssStyle.width(div).width ie浏览器支持@
+.offsetParent
+ 1.元素本身没有定位 父级也没有定位得到的是body
+ 2.元素本身没有定位，父级有定位，得到的是理他最近的那个父级
+ 3.本身有定位，父级没有 得到的是body
+.offsetTop  距离offsetParent的的top距离       
+       Ieft
+       Width   元素 代表本身的大小        clientWidth 不包含border的值、
+       Height
+.parentNode  获得父级节点 和定位没关 结构有关 
+.previousElementSibling   获得兄弟级前一个节点 元素节点
+.nextElementSibling       获得兄弟级后一个节点   高版本兼容
+.previousSibing    低版本的     ||兼容  包括文本节点
+.nextSibling  包括文本节点
++
+.firstElementChild   获得第一个孩子 
+.lastElementChild  最后一个 
+lastChild 属性返回指定节点的最后一个子节点 高版本的  lastChild || lastElementchild
+
+event.cancelBubble= true;用于ie的阻止冒泡事件，event.stopPropagation（）用于firefox和chrome等其他浏览器
+
+event.preventDefault();//阻止默认行为   
+在IE浏览器中，则使用window.event.returnValue = false;阻止默认行为  return false;跟组织默认事件 阻止冒泡一样
+  function subClickHandeler (e) { 
+        e = e || window.event;
+        if(e.stopPropagation)
+            e.stopPropagation();
+        else
+            e.cancelBubble = true;  默认事件同理
+    }
+
+元素.onclick=null
+元素.addEventListener('click',function(){},true); true捕获  false冒泡   默认是false   先捕获后冒泡
+元素。removeEventListener('click',fn1,false)解除事件
+btn.attachEvent('onclick',function(){})  ie8及以下低版本下的  不支持捕获 同意元素绑定同一事件执行不同处理程序 顺序与添加的相反
+    detachEvent                                  解除
+document.onclick=function（a）{console.log（event）}
+var evt=window.event||a   兼容  输出event的             使用event时考虑兼容
+event事件对象     1.event.type 代表发生这件事件的事件类型
+                  2.     .tageName
+阻止默认行为   事件对象.preventDefault（）   右键快捷栏
+          ie8     事件对象.returnValue=false
+阻止冒泡        事件对象.stopPropagation（），在ie8以下不支持
+                事件对象.cancelBubble=true
+if (window.event) {
+			window.event.cancelBubble = true;
+		} else {
+			event.stopPropagation();
+		}
+onmousemove：移动事件  移动触发
+onmousedown  鼠标按任意键时触发
+        up
+onmouseover  鼠标在元素边缘进去时触发一次     onmouseenter    不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。
+                                                               只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。
+onmouseout    边缘出来是触发一次                     lever
+oncontextmenu   右键触发
+event.clientX     鼠标在浏览器可视区的坐标
+     .clientY 
+     .pageX         距离body（html）左上角00点的距离
+     .pageY
+     .screenX    距离屏幕的距离  
+     .screenY 
+inp.focus   输入框聚焦
+ev.keyCode
+.onkeydown          按下键时触发
+.onkeyup            按键松开始触发
+.onkeypress    按下字符键时触发
+
+.onresize 屏幕尺寸发生变化时触发
+.onfocus      input输入框聚焦时触发
+.onblur    input失去焦点时
+ ondblclick 鼠标双击
+
+hasOwnProperty()函数用于指示一个对象自身(不包括原型链)是否具有指定名称的属性。如果有，返回true，否则返回false。
+ 
+
+
+
+
+
+
+
+

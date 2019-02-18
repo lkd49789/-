@@ -1,0 +1,300 @@
+4  0  100
+
+bootstrap  
+angularJS。js
+vue。js
+react。js
+node。js
+移动
+JQ mobile
+swiper
+
+echarts
+highcharts
+D3
+history.pushState(state, title, url); state:null title:null
+history.replaceState(state, title, url);
+
+text-indent：2em   首行缩进
+white-space: nowrap; 所有的文本都显示在这一行
+text-overflow: ellipsis; 多余的文本用省略号显示
+overflow：hidden
+/*就显示两行
+text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+/*
+3 -moz-appearance: none;
+   -webkit-appearance:none;
+            appearance:none; 去掉<select> <option></option></select>
+cursor:pointer;  鼠标变小手
+input type="file"
+            checkbox   复选框
+<input   autofocus="">  聚焦   input:focus  聚焦时的样式
+<input  readonly="">  只能读      input：read-only
+         readwrite     可读可写          read-write  
+<input type="radio" name="sex"  checked=""/>男      name= 相同时单选  checked有时进去默认选择一个
+<input type="radio" name="" id="点击" /><label for="点击">点我</label>    label关联input 点击文本内容'点我'就先当于点击选择框
+<input tyupe="email" required="" multiple=""/>  email简单的判断是否符合email地址  requirde不允许提交空的 multiple允许输入多个                                                                                                                email地址
+              submit   提交按钮       autofocus进来就聚焦
+              url
+  type="number" 只允许输入数字 默认的每次增加减少1   max=""  min=""可以输入的最大最小的值 value=""控制默认的值 step=""每次加的值
+         range   活动条  step=""每次增加的值
+ <input placeholder="">输入框内默认的字
+<textarea name="" rows="3" cols="100"></textarea>   多行文本域
+<fieldset id="">线包起来
+   <legend>线上的字</legend>
+</fieldset>
+
+calc（值1 - 值2）：允许不同单位之间进行计算  算法左右要有空格
+<input type="text" list="myList" />
+     <datalist id="myList">
+			<option value="ps">ps</option>
+			<option value="js">js</option>
+			<option value="jq">jq</option>
+			<option value="css3">css3</option>
+     </datalist>                      先给datalist定义一个id  再给关联的表单添加list值  list的值就是datalist的id值
+<base target="_blank" href="https://www.baidu.com" />   _blank在新窗口中打开链接
+<form id="f" action="1.php" oninput="x.value = parseInt(a.value)+ parseInt(b.value)">
+				<input type="text" id="a" />+
+				<input type="text" id="b" />=
+				<input type="submit" />				
+oninput  表单的值发生变化时就触发事件			</form>
+onchange 事件常结合对输入字段的验证来使用。当用户改变输入字段的内容时，失去焦点时触发事件。
+onfocus  input聚焦时触发
+onblur 失去焦点
+
+       <header>头部</header>
+		<section>
+			<article>
+				<header></header>
+				<section></section>
+				<footer></footer>
+			</article>
+			<aside></aside>
+		</section>
+	<footer>尾部</footer>
+[class="box"]完全等于
+			[class="box"]{
+				border: 1px solid red;
+			}
+			[class~="box"]会选中包含box类
+			[class~="box"]{
+				border: 1px solid red;
+			}
+			可以允许有连字符
+			[class|="box"]{
+				border: 1px solid red;
+			}
+			匹配只要class类名里面包含bo就可以选择到，不管bo存在的位置
+			[class*='bo']{
+				border: 1px solid red;
+			}
+			匹配只要class类名里面包含bo，并且bo的位置在最后面
+			[class$='bo']{
+				border: 1px solid red;
+			}
+			匹配只要class类名里面包含bo，并且bo的位置在最前面
+			[class^='bo']{
+				border: 1px solid red;
+			}
+：root  选择到根元素  html
+div ：not（） div的后代选择器 不会选择搭到not括号里面的  空格就是div的后代
+：empty   选择空的元素
+：targetl：nth-of-type（n）父级下的第N个ul
+：only-child  父级下的唯一的一个子级
+a：link{color：颜色}当鼠标没有访问是的颜色。（样式）
+a:visited{color:颜色}当你访问后链接的颜色。（样式）              顺序一般不能颠倒，
+a：hover{color：颜色}当你鼠标放上超链接时候的颜色。（样式）    
+a：active{color:颜色}当你鼠标按下去没松开是的颜色（样式）
+  
+[attribute]
+  
+input：active    鼠标按住没没松开时
+div+p{} div紧跟的元素p应用的样式  同级
+div~p{} div后所有符合p的          同级
+div：：before{content：'今天'}在div内容前面插入'今天'
+div::after{content:' '} 后面插入
+滤镜 可以使图片模糊 黑白等
+filter：grayscale(100%); 使图片黑白
+
+2D转换属性名是 transfrom：方法
+-ms- IE的私有前坠
+-webkit- 谷歌和苹果safari
+-moz- 火狐的
+-o-  欧朋
+不加前缀的也写一个
+perspective：   透视 加在有3D效果的元素的父级或本身显示效果的身上（hover） 
+移动方法translate（1，2） 1代表水平方向位移   2垂直方向位移  一个方向动的话另一个为0
+        translateX（1） X轴 移动 左负右正        单位可以是像素px   可以是% 参照自己的宽高
+        translateY（1） Y        上负下正
+        translateZ（） Z轴平移 正前 负后
+transform：translate3d（x，y，z） 三个方向的位移
+        rotate（旋转的度数deg） 旋转，单位deg 正值顺时针旋转  负值逆时针旋转
+transform：rotate3d（x，y,z,deg） 绕什么轴什么轴就是1 不饶就0 
+transform-origin：旋转中心 可以是像素 方位词 top right center   left bottom center
+         scale（）缩放 没有单位 一个参数的时候 表示水平垂直方向按比例缩放 两个参数是 1水品 2垂直 可以控制缩放中心点
+         scaleZ（）
+         skew（deg）  斜切 两个参数 1X轴斜切  2Y轴斜切 skewX   skewY
+transition：all 1s；  过度
+transform-style:preserve-3d;  父子级都有3D效果的话想要保留子级的就给父级添加这个
+transition-property:all(宽高)；执行过的的属性
+transition-duration：1s；执行过度所要的时间为1秒‘’‘
+transition-delay：2s； 延迟2秒开始执行                     
+transition-tiiming-function     linear匀速9
+opacity：   透明度0-1  IE低版本filter：alpha（opacity=50）；0-100
+backface-visibility：hidden 隐藏背面
+                      visible 可见
+visibility：hidden  占位 隐身 可以进行过度
+          ：visible  可见
+perspective：   透视 加在有3D效果的元素的父级或本身显示效果的身上（hover）
+
+animation：1，2，3，4，5，6,7,8
+           1.动画名称   2.动画执行时间  3.动画执行曲线linear 匀速 4动画执行延迟时间delay  5.动画执行次数默认1 循环执行infinite 
+           6.动画是否逆序执行 默认normal不会逆序 ，alternate逆序执行  7 动画状态 默认running 进来没有执行paused
+           8.动画之外的状态forwards执行完动画后停留在最后一帧  backwards在动画延迟的时间内，动画停留在第一帧    得有delay
+             both开始前停留在第一帧 结束后停留在最后一帧
+@keyframes  动画名{form{}to{} }；
+document.ondragstart = function  () {	去掉拖图片这个默认		
+			return false;			
+		}
+
+div：first-letter第一个字  块元素 阴影
+          -line 第一行
+text-shadow：0px 0px 0px 颜色；支持多个阴影
+box-shadow：inset 0px 0px 0px 0px 颜色； 1内阴影 不写默认外 水平 垂直 模糊程度 阴影半径 颜色
+word-break：normal  浏览器默认的还行形式，连续英文字母不会换行 对于一篇英文文章会换行
+            break-all强制换行 到头就强制换行 单词也会拆分 中文无所谓
+            keep-all 会在空格连字符出进行换行    非中日韩
+word-wrap：break-word  看下一个单词放不放的下 放不下就换行  开头不会是英文标点符号
+@font-face{
+        font-family: my
+        src:url()}
+box-sizing:border-box;宽高就是盒子大小
+           content-box； 宽高就是盒子内容大小 默认背景图片的起始位置 和这些有关
+background-origin:padding-box; background-position:30px 30px和padding没关系 padding多大 30 30的位置 都不变 padding外边  默认
+                  border-box；                               参照的是border最外边的边 初始位置 
+                  content-box； 参照的是padding内边内容开始的点
+
+背景图片的显示区域
+bakground-clip：content-box；从padding内边  内容区域显示图片的局部
+                padding-box；从padding外边 显示图片
+                border-box；从border边显示图片
+
+background：-webkit-gradient（linear，0 0，100% 100% ，color-stop（0，颜色），color-stop（1，颜色））；
+                                      开始的位置 结束的位置         渐变的开始位置         结束位置
+                             （linear，0 0，100% 100%，from（颜色），to（颜色））
+            -moz-linear-gradient（top left，颜色 0%，颜色 50%，颜色 100%）；线性渐变
+            -webkit-radial-gradient（100px 100px，颜色 50%，颜色 100%）；径向渐变
+background:-moz-repeating-linear-gradient(top left, red, red 5px, white 5px, white 10px);
+                重复渐变色
+弹性盒
+div{display：-webkit-flex；} 父级盒子宣布可以平分
+     -moz-flex：1；                子级自己分一份  这份是在去掉margin padding后再分的 
+@media all and (min-width:500px )and （max-width：1000px）{}1000-500之间应用
+<link rel="stylesheet" href=""  media="screen and (max-width:1024px)" />  screen屏幕】
+
+localStorage.                 长时间存储
+sessionStorage.setItem（1，2） 临时存储   1键名  就是名字  2.要保存的值如：oin[0].value
+sessionStorage.getItem('键名')   获取这个键名的值
+              .键名
+              ['键名']
+              .removeItem（'键名'） 删除这个键名的
+              .clear（）     全部删除             
+              .key（index）         第index的键名
+localStorage.
+JSON.stringify（对象） 转化为JSON格式的字符串      
+JSON.parse（对象） 把JSON格式的字符串转化为对象
+                        
+<canvas></canvas> JS获得这个标签 
+在 cvg= 获得的标签.getContext（'2d'）获取上下文
+fill（）根据路径填充颜色   stroke（）根据路径绘制边框  
+cvg.fillRect（x,y,宽，高）绘制矩形 绘制矩形起点坐标     
+cvg.fillStyle='pink'先颜色在绘制 填充颜色
+cvg.strokeStyle  绘制的边框颜色
+cvg.strokeRect(x,y,宽，高)绘制边框矩形
+cvg.clearRect(x,y,宽,高)   清除矩形1
+cvg.arc（x，y，半径，开始角度(弧度制)，结束的，是否逆时针是就true默认false）  绘制圆 Math.PI/180
+cvg。beginPath（）开始的点
+cvg.closePath()  结束     
+cvg.moveTo（开始点X，Y坐标）
+cvg.lineTo（下一个点X，Y坐标）cvg.stroke() 开始绘制
+cvg.linewidth=10  线宽
+cvg.lineJoin='round'  圆角 bevel 平角  线与线之间的夹角
+cvg.lineCap=  round     圆的     square 方的       线冒 高位宽的一半
+bezierCurveTo（x1,y1,x2,y2,x,y）  x1y1第一组控制点坐标 x2y2第二组 xy终点坐标贝塞尔曲线
+cvg.quadraticCurveTo（x1,y1,x,y）
+var lg=cvg.createLinearGradient(起点x，起点y，终点x，终点y)  渐变色
+lg.addColorstop（0，'颜色'） lg.addColorstop（0。5，'颜色'）lg.addColorstop（1，'颜色'）
+cvg.fillstyle=lg
+var 渐变对象=cvg.createRadialrGradient（x,y,r,x1,y1,r2） 径向渐变
+cvg.translate（x，y）原点  X轴移动 Y  坐标轴移动
+cvg.scale（x，y）X轴缩放0-1   Y       缩放后左边轴的值相应的变化  比如缩放0.5   移动就减半
+cvg.rotate（45*Math.PI/180) 旋转坐标轴  在以坐标轴进行操作
+cvg.shadowOffsetX=阴影横向偏移量
+cvg.shadowOffsetY=
+cvg.shadowBlur=阴影范围
+cvg.shadowColor=颜色
+cvg.save（）存档   两个之间的不影响调用后面的
+cvg.restore（）调用
+var img=new Image（）    img.src='../'  img.onload=function(){}
+cvg.drawImage(img,img上的X，上的Y，选取图片的大小w，h，cvs上的X，Y，图片显示的W，h)
+cvg.fillText（'字'，）
+cvg.textBaseline='垂直对齐的方向' middle top bottom
+
+
+
+<video src='' controls="" autoplay="" loop=""><> controls 显示播放控件
+            autoplay自动播放  loop循环播放 preload="auto" 页面进来时视频自动加载 =meta加载 =none进来时不加载 不能和autoplay一起
+               poster 视频播放前显示的画面  muted 页面加载进来就是静音的 
+引入不同的视频格式就用 video  里面的  <source src=""/>
+下的 方法 vdo.play（）开始播放  .（）暂停
+vdo.duration 视频总时间  秒
+vdo.canPlayType（）检查视频能否播放
+vdo.currentTime()视频播放了多久时间可读可写  vdo。videoWidth/Height 视频原有尺寸
+vdo.currentSrc当前加载视频路径 
+  .onplay播放时触发            .onpause  
+  .onended 当视频播放结束是会触发  .onpause 当视频暂停时触发    视频结束时先触发暂停在结束
+  .onvolumechange 当音量发生改变时会触发的事件 
+  .ontimeupdate   播放进程位置
+  webkitrequestFullScreen（）全屏  
+vdo.defaultMuted    muted 静音    
+    volume=           默认是1 音量的大小 
+paused 是否暂停
+vdo。defaultPlaybackRate   播放速度默认1S
+音频  <audio src=""><>  <source>
+
+
+ondragstrat  return false  阻止拖拽默认事件
+.addEventListener（1，2） 事件监听     
+input type="file" 网页上传文件  JS获取他 获取的.files 这是获取文件列表 数组进行操作
+ .name 文件名  .lastModifiedDate 文件最后修改的时间 。type文件类型  size 大小字节
+var reader=new FileReader（）低版本不支持 创建这个去读取files 
+以文本的形式读取文件
+ reader.readAsText(文件对象，编码格式)
+    编码格式：默认的编码格式utf-8,省略该参数就按照默认处理
+结果在result里面       reader.onload     reader.result
+1.异步进行读取  this
+2.监听onload 放在这个里面 否则读取不到
+3.结果放在result里面             var的FileReade.result
+readAsBinaryString（）二进制读取的方式放进result
+readAsDataURL（） img路径放进result
+
+var at=ev.dataTransfer 获得这个对象在用这个对象下面的方法 拖拽的东西
+at.setData（'类型',id）   at.getData（'leixing'）
+ondragstart 拖动事件  先给拖动对象draggable属性
+ondragenter  拖拽过程中触发
+.ondragover 取消默认阻止拖动 ev.preventDefault()  
+.ondrop 元素拖到这个里面触发
+
+                                           
+
+
+
+
+
+

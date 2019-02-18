@@ -1,0 +1,113 @@
+require: node 和 es6 都支持的引入
+export / import : 只有es6 支持的导出引入
+module.exports / exports: 只有 node 支持的导出
+module.exports   require
+
+规定屏幕宽为750rpx。如在 iPhone6 上
+
+scroll-view横向滚动要对子元素进行display:inline-block ,容器进行 white-space: nowrap;
+
+/*传至变成字符穿*/
+ header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+
+text-align:center;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-around;
+
+flex-direction:column;
+
+修改页面标题 wx.setNavigationBarTitle({
+      
+	title: ,
+   
+ })
+
+decodeURIComponent() 函数可对 encodeURIComponent() 函数编码的 URI 进行解码。
+
+
+跳转传值：wx.navigateTo({
+      
+	url: 'oe/oe?title=' + re.currentTarget.dataset.title + '&oe=' + re.currentTarget.dataset.oe 
+	})
+ 预览（可以放大）：wx.previewImage({
+      
+	current: 'https' + url.slice('4'), // 当前显示图片的http链接
+      
+	urls: ['https' + url.slice('4')] // 需要预览的图片http链接列表
+    
+	})
+
+下载图片等： const downloadTask = wx.downloadFile({
+      
+		url: 'https' + url.slice('4'), //仅为示例，并非真实的资源
+      
+		success: function (res) {
+        
+		// console.log(res)
+        
+		    wx.saveImageToPhotosAlbum({
+   /*保存图片到系统相册*/       
+			filePath: res.tempFilePath,
+          
+			success: function (res) {
+            
+				// console.log(res)
+          
+			},
+          
+			fail: function (res) {
+           
+ 				// console.log(res)
+            
+				// console.log('fail')
+          
+			}
+       
+ 	  	   }) 
+     
+ 	       }
+    
+	})
+   下载的进度downloadTask.onProgressUpdate((res) => {
+
+      	// console.log('下载进度', res.progress)
+  （是0-100）    
+	that.setData({
+ 
+      	 	progress: res.progress
+     
+ 	})
+    
+    })
+选择图片：
+wx.chooseImage({
+  count: 1, // 默认9
+  sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+  sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+  success: function (res) {
+    // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+    var tempFilePaths = res.tempFilePaths
+  }
+})
+wx.request   header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },把data里面的值变成字符传给后台
+
+一般循环格式：<scroll-view class='left' scroll-y="true" style='height:{{wheight}}px' >
+   
+	<block wx:for='{{categorys1}}' wx:for-item="item" wx:key="">
+       
+		<view class='categorys {{num==index?"bg":""}}' data-text="{{item.category_id1}}" data-index="{{index}}"  bindtap='leftclick'>
+			<text>{{item.category_name1}}</text>
+		</view>
+  
+	</block>
+
+</scroll-view>
+

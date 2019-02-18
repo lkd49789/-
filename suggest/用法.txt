@@ -1,0 +1,39 @@
+<input type="text" name="arrcity" id="arrcity" value="" />
+<div id='suggest' class="ac_results">
+</div>
+
+
+ajax 成功 值：data.all   
+ for (var i = 0; i < data.all.length; i++) {
+       commoncitys[i] = data.all[i];/*单个的值*/
+ for (var i = 0; i < data.all.length; i++) {
+       citys[i] = data.all[i];/*单个的值*/
+                
+  }
+
+
+$(function() {
+	$("#arrcity").suggest(citys, {
+		hot_list: commoncitys,
+		dataContainer: '#arrcity_3word',
+		attachObject: '#suggest'
+	});
+//	$("#city2").suggest(citys, {
+//		hot_list: commoncitys,
+//		attachObject: "#suggest2"
+//	});
+});
+
+suggest.js
+options.hot_list[h][0]  每个值的每一项   拼音匹配是需要得到首字母 以及 拼音  options.hot_list[h][2]为拼音  1为值  3为首字母
+每一个li显示的内容如下
+html+='<li rel="'+options.hot_list[h][0]+'"><a href="#'+h+'"><span>'+options.hot_list[h][2]+'</span>'+options.hot_list[h][1]+'</a></li>';
+匹配的修改以下
+for (var i = 0; i < options.source.length; i++) {//国内城市匹配
+	var reg = new RegExp('^' + items + '.*$', 'im');
+	if (reg.test(options.source[i][0]) || options.source[i][1].indexOf(items)!=-1 || reg.test(options.source[i][2]) || reg.test(options.source[i][3])) {
+		/*输入的值和 中文 名匹配或者和首字母匹配或者和拼音匹配*/
+		console.log(options.source[i][2])
+		html += '<li rel="' + options.source[i][0] + '"><a href="#' + i + '"><span>' + options.source[i][2] + '</span>' + options.source[i][1] + '</a></li>';
+	}
+}

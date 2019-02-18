@@ -1,0 +1,16 @@
+<div class="sort_box">
+			
+</div>
+<div class="initials">
+     <ul></ul>
+</div>
+
+ajax 内  成功 要排序的值  如：value.Manufacture_CN
+$.each(data,function(key,value){
+	// console.log(value)
+	var div1 = $("<div class='num_name'>").html(value.Manufacture_CN);
+	var div2 = $("<div class='sort_list'>");
+	div1.appendTo(div2);
+	div2.appendTo(".sort_box");	
+				})
+ initials();

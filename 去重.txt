@@ -1,0 +1,85 @@
+es6 
+let array = [1, 1, 1, 1, 2, 3, 4, 4, 5, 3];
+ let set = new Set(array);
+ console.log(set);
+ // => Set {1, 2, 3, 4, 5}
+Array.from(set)	/*转化为数组*/	
+方法一
+		var len=cplist.length;
+		for(var i = 0; i < len; i++) {
+			for(var j = i + 1; j < len; j++) {
+				if(cplist[i].amt_des == cplist[j].amt_des) { //通过id属性进行匹配；
+					cplist.splice(j, 1); //去除重复的对象；
+					len--;
+					j--;
+			 	}
+			}
+
+		}
+
+方法二
+var arr=要去重的数组
+var hash = {};
+var result = [];
+for(var i = 0, len = arr.length; i < len; i++){
+    if(!hash[arr[i].product_id]){
+        result.push(arr[i]);
+        hash[arr[i].product_id] = true;
+    }
+}
+console.log(result)
+
+方法三
+var cplist=要去重的数组
+var arr = [],      /*如果有相同的值则跳过，不相同则push进数组*/
+		len = cplist.length;
+		for(i = 0; i < len; i++){
+			for(j = i + 1; j < len; j++){
+				 if(cplist[i].product_id == cplist[j].product_id){
+					j = ++i;
+				 }
+			}
+			arr.push(cplist[i]);
+		}
+console.log(arr)
+/*归类1*/
+var _arr = [{'area':'北京','name':'刘德华'},{'area':'西安','name':'小明'},{'area':'德国','name':'小红'},{'area':'德国','name':'小李'},{'area':'东北','name':'小赵'},{'area':'东北','name':'小华'}];
+        let m = {}
+        for(let i = 0; i< _arr.length; i++){
+            let t = _arr[i]
+            if(!m[t.area]){
+                m[t.area] = []
+            }
+            m[t.area].push(t.name)
+        }
+        let arr = []
+        for(let key in m){
+            arr.push({ area: key, name: m[key] })
+        }
+/*归类2*/
+ var arr = re.data.list
+        var map = {},
+          dest = [];
+        for (var i = 0; i < arr.length; i++) {
+          var ai = arr[i];
+          // console.log(ai)
+          console.log(map)
+          if (!map[ai.category_name]) {
+            dest.push({
+              category_name: ai.category_name,
+              src: ai.src,
+              checked: ai.checked,
+              Mnum:0,
+              data: [ai]
+            });
+            map[ai.category_name] = ai;
+          } else {
+            for (var j = 0; j < dest.length; j++) {
+              var dj = dest[j];
+              if (dj.category_name == ai.category_name) {
+                dj.data.push(ai);
+                break;
+              }
+            }
+          }
+        }

@@ -1,0 +1,38 @@
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg); //匹配目标参数
+    if (r != null) return decodeURI(r[2]);
+    return null; //返回参数值
+}
+//点击其他地方隐藏盒子
+function stopPropagation(e) { 
+	if (e.stopPropagation) {
+		e.stopPropagation(); 
+	}else {
+		e.cancelBubble = true; 
+	}
+} 
+.replace(/\s+/g,"");匹配空格
+.replace(/\s+|-/g,"") 匹配空格和-
+
+var reg = /^1([358][0-9]|4[57]|7[0135678])\d{8}$/;判断手机号
+phone.match(reg) == null 手机号  返回下标  如果为null 说明没找到手机号错误
+
+var reg = /^[0-9]+.?[0-9]*$/;判断是否为数字
+.match(reg) == null 返回下标  如果为null 说明没找到没有数字
+
+str为要去除空格的字符串:
+去除所有空格:   
+str   =   str.replace(/\s+/g,"");       
+去除两头空格:   
+str   =   str.replace(/^\s+|\s+$/g,"");
+$.trim(str) 去掉前后空格
+去除左空格：
+str=str.replace( /^\s*/, '');
+去除右空格：
+str=str.replace(/(\s*$)/g, "");
+replace(/[A-Za-z]/g,'')
+[A-Za-z]所有字母
+crossDomain: true == !(document.all),
+
+

@@ -1,0 +1,18 @@
+git init //把这个目录变成Git可以管理的仓库
+
+git add README.md //文件添加到仓库
+
+git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 
+
+git commit -m "叙述" //把文件提交到仓库
+
+git remote add origin 地址 //关联远程仓库
+
+git push -u origin master //把本地库的所有内容推送到远程库上
+
+删除：
+git rm -r --cached 要删除的文件名
+	
+git commit -m '叙述'
+
+git push -u origin master //更新到github上

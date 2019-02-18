@@ -1,0 +1,246 @@
+，并列   空格下一级
+border：dashed 虚线
+background-image: url(图片位置);插入图片
+background-position:70px center; 图片 水平位置  垂直居中
+多重背景：background：背景1，背景2，背景3
+注意：先写的背景在上方，背景和背景之间用逗号隔开。
+background-size：cover保持背景图片原有的大小
+background-attachment:fixed;/*背景图片不动
+                      scroll 背景图片跟着一起动*/
+vertical-align: middle;图片垂直居中
+    background-size: 100% auto;/*背景图片自适应
+                     cover   宽度高度同时缩放多出的部分裁切
+                     contain  只要有一个方向到达边缘 另一边不会再改变 会有留白
+                     百分比*/
+border-bottom:3px double red  双下划线；
+select  option
+outline: none;  去掉input选中框
+border-radius: 0px 0 8px 8px;  弧度
+ list-style:square  方块
+vertical-align:middle  img
+
+line-height: 40px;  跟高度一样就居中
+list-style：none；列表默认样式取消
+text-indent: 2em首行缩进2个字符
+text-align：center；居中
+vertical-align：middle；	把此元素放置在父元素的中部。一般用于表格垂直方向居中，但是他可以定义一个行内块元素img进行垂直方向。
+font-size：14px；字体大小
+fon-family 字体样式
+
+font-style：定义一个字体的样式
+           intalic 斜体
+           normal 正常样式
+           oblique斜体
+font-weight：定义字体是否加粗
+            bold加粗
+<input type="text" name="may-">
+             password  name="psw"
+font-family：字体1，字体2，字体3
+            1可以设置多个备用字体，如果第一个没有的话就以第二个加载。。。
+            2如果是英文字体，中间有空格的话必须加引号。
+            3如果使用复合属性font 必须定义字体font-family
+            4定义的顺序font：font-style font-weight font-size/line-height font-family
+
+属性选择器
+[属性名]{}  选择到的是所有有该属性名的元素
+[属性名=属性值]{}选择到的是所有有该属性名，并且属性值为这个值得元素。
+单项按钮radio
+如果想要达到互斥必须同一个name
+<input  type="radio" name="sex"  value="高中" >高中	 
+<input  type="radio" name="sex" value="初中"  > 初中
+<input  type="radio" name="sex" value="大学" > 大学
+
+多选按钮checkbox 一组也要设置同一个name值
+<input  type="checkbox" name="sex" value="大学" > 大学
+<input  type="checkbox" name="sex" value="高中" > 高中
+<input  type="checkbox" name="sex" value="初中" > 初中
+
+按钮：button普通按钮
+      submit提交按钮
+      reset重置按钮
+<input  type="button" value="按钮内容" />
+<botton type="">双标签按钮</botton>
+
+文本域标签：双标签
+cols：定义列的宽
+rows定义行的宽
+
+text
+<textarea  name=“” id="" cols=150 rows=
+
+=
+
+
+
+display: inline-block;行内元素转换为行内快元素
+display：block； 转化为块元素   
+display；inline； 转化为行内元素
+background-repeat: 值
+                   no-repeat 不平铺
+                   repeat-x 平铺
+                   repeat-y 平铺
+background-position:值1 值2 100px  100px 
+    1代表背景图片起始位置在盒子里面的水平位置
+    2背景图片在盒子里面的垂直方向的位移
+    background-attachment:fixed;背景图片不动
+                          scroll 背景图片跟着一起动
+float: left 向左浮动
+       right向右浮动
+       top向上浮动
+       bottom向下浮动
+border-bottom: 1px solid #ccc; 下划线
+                 宽度 实心线  颜色
+                   dotted虚线
+overflow: hidden;溢出隐藏
+ float: left;   浮动  要谁浮动就给谁加
+        rigtht
+        top
+        bottom
+        none
+
+box-sizing:fixed
+           border-box;  使盒子大小固定内容发生改变
+          clear:both;/*用来清除浮动 放在塌陷元素内层最后一个浮动浮动元素盒子的后面*/
+          float: left;/*浮动
+          1.会改变盒子原有属性
+          2.如果一个盒子内容全部进行浮动，父级盒子宽度不足以放下所有的盒子那么盒子会自己掉下来
+          3.如果不能放在第一行浮动里面，去找他的上一个兄弟的边来贴，不行就继续上一个，最后还没有的话就去贴父级。
+          4.右浮动会改变原有的顺序。
+          5.块级元素浮动后，如果没有定义宽度高度，会收缩至元素本身大小
+          6.如果是行内元素，浮动之后直接可以设置宽高，不用转化为行内快块元素
+           ：after{
+                  content"
+                  display:block
+                  找到塌陷元素添加overflow:hidden
+
+a：link{color：颜色}当鼠标没有访问是的颜色。（样式）
+a:visited{color:颜色}当你访问后链接的颜色。（样式）              顺序一般不能颠倒，
+a：hover{color：颜色}当你鼠标放上超链接时候的颜色。（样式）    
+a：active{color:颜色}当你鼠标按下去没松开是的颜色（样式）
+text-decoration: none;定义a超链接 取消超链接下划线
+                 underline:下划线;
+                 overline: 上划线
+                 line-through 删除线
+
+ul li 无序列表 
+ul li：nth-child（n）{} 元素：nth-child（n）{} 从当前元素出发 父级下的第N个元素
+<ol type="1"> li 有序列表
+    start=数字 表示有序列表开始的那个值
+    reversed：可以让有序列表倒序
+dt标签 dd内容
+z-index：层级   <span>不能设置宽高
+
+position：值 fixed  固定定位
+          relative，相对定位，一个元素进行相对定位之后，元素本身的位置还存在  结合4个方位名词 left right top bottom
+          方位名词的值是相对于自身移动的
+          absolute  绝对定位(固定定位fixed)  当一个元素进行绝对定位后，元素本身的位置已经不存在了（类似于浮动浮上去了），
+                               1.先找父级，如果父级没有定位，就参考父级进行移动
+                               2.如果父级没有定位，就参考父级的父级，如果父级的父级有定位，就参考父级的父级
+                               3.。。。。。。
+                               4.如果都没有定位，就参考Html定位
+                               5.如果父级元素都有定位的话，就参考离他最近的元素定位
+                               一个块级元素进行绝对定位之后，如果没有设置宽高，就会自动收缩至文本大小
+                               如果说一个行内块元素进行绝对定位之后，可以直接设置宽高度，并不需要转行内块或块元素
+                               一般情况：父相子绝，但是父级也可以用绝对定位。
+                               z-index:值 
+                                       数字 没有单位 用来调整点定位元素的层级
+nth-child 
+<table>表格  tbody    tfoot
+<caption>(表格标题)　　　　　　　　　　　　　　　
+    <tr>（行）　　<ｔｈ>（加粗居中）　　　
+      <td></td>（列）　　　　　　　　 border定义边框　
+    </tr>                            width定义宽度
+                                     align水平对其方式 left默认值 center right
+                            cellspacing单元格和单元格之间的距离
+colspan                     cellpadding单元格边线内容之间的距离
+colspan跨列
+rowspan跨行
+
+
+
+ border-collapse：collapse 边框1px
+
+word-spacing字母与字母之间的距离 字与字之间的距离
+letter-spacing 单词与单词之间的距离
+.box：first-letter{  font-size：40px；} 第一个字 块级元素
+      first-line
+
+            
+                                           
+                            
+                                                       
+
+
+元素：hover：代表这个原元素处于鼠标放上去的时候，这个元素本身加载的颜色样式
+元素：hover：选择器代表当这个元素处于鼠标放上去时，匹配到的选择器的样式。
+元素：hover：选择器{元素和选择器是有关系的，比如父子级，不是可以控制所有的选择器的。
+定义css文件
+通过style标签写在head标签里面
+   优点：结构样式分离
+   缺点：但是分离不彻底，只能应用于单页面
+link标签引入head里面
+   优点：结构样式完全分离，可以引用于多个页面
+   缺点：如果公用样式定义的不合适，会加载一些不需要的样式
+<div style"color:red">
+直接通过属性style=“css样式属性名：属性值;css样式属性名：属性值”
+   优点：权重比较高。
+   缺点：比较乱，结构样式不分离。
+div .box{color：red！important；}强制设置样式。优先级最高。
+优先级！important>行内样式(通过style属性设置)>id选选择器>类选择器>标签选择器
+
+
+
+
+<span></span>:没有任何含义的行内元素;
+<b>;加粗   <strong>:加粗; <i>:倾斜;<em>:倾斜;&nbsp空格
+<u>:下划线 <ins>:下划线; <s>:删除线; <del>:删除线;
+大于号&gt &lt &yen美元符号 &copy版权符号 &times乘号 &divide除号
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.一般关于文本样式的一些属性是可以继承的：colo font text-align.....
+2.宽度可以继承，高度不能继承，但是行高line-height可以继承
+3.标签选择器的权重就比继承过来的属性权重要高
+4.a超级链接的字体颜色和文本修饰线不能个通过继承来设置属性，必须设置在本身。
+
+
+
+
+
+
+
+
+
+
+表单
+<form>
+     用户名：<input type=“text”/>
+    <br>
+     密码：<input type=“password”>
+
+
+
+
+
+
+
+ 
+               
+
+ 
+            
+
+
+

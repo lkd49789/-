@@ -1,0 +1,9 @@
+npm install -g webpack --save-dev   安装webpack
+webpack  要打包的文件名  打包后文件名
+npm install css-loader style-loader --save-dev 安装loader
+当要处理css格式的文件是 需要加css-loader!
+当要style生效时  需要加style-loader！             style-loader!css-loader!  
+命令行界面    webpack  要打包的文件名  打包后文件名 --module-bind 'css=style-loader!css-loader'
+              --watch  自动更新 自动打包
+              --progress 看到打包过程 --display-modules  看到打包模块 --display-reasons
+              

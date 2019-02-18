@@ -1,0 +1,105 @@
+https://www.baidu.com/s?wd=你要搜索的内容
+$('.header').load('header.html')
+$('.footer').load('footer.html')
+async:true  默认异步
+cache:true  默认缓存
+$('')  =====jQuery('')
+$(function(){})
+jQuery.noConfilct(); 移除$所有权
+$('div').find('')     ==后代
+         children     = 子代
+         next         = + 后兄弟节点
+         nextAll         =~
+         prev()       前兄弟节点
+         prevAll 
+         nextUntil（1,2） 1选择同级往后的 到匹配的为止  不包含头和尾 1表示范围  2表示范围中在进行条件选择
+         prevUntil（）     前兄弟
+$("p").siblings(".selected")         查找每个p元素的所有类为"selected" 的所有同胞元素
+      .get(0) 把0下标的JQ获得的元素 转化为JS获取的
+$(JS获得的)  把JS获得的转化为JQ
+
+$('li：first') 选取集合的第一个元素
+       last
+$('li：not(.box)')  集合中去除box
+$('li：even')       下标0开始    偶数个
+$('li：odd')             奇数
+$('li：eq（index）') 等于index的元素
+       gt（index）   大于
+       lt（index）    小于
+$('ul空格：header')  ul后代里面的h1-h6
+$('：animted')  正在执行动画的
+$('input:focus')  input聚焦的  
+$('：contains（内容）')  选取标签内容为内容的元素集合
+$('：empty')   空元素
+$('li:parent')  选取有子元素或内容的元素
+$('ul：has（什么）') 选取含有什么元素的ul
+$(':hidden')    所有不可见元素
+$(':visible')    可见元素
+$('li').is('')
+$('li').hasClass（'class'）判断一个元素是否包含一个确定的类(class)
+$('li').slice(0,2)  选中第0到2个li
+$('div').filter('.div1');//选择div标签中class属性为div1的div元素 
+         end（）  获得元素前一次状态
+         contents（） 获得所有节点
+        .html('<b>world!</b>') 类似innerHTML
+         text（）       文本的
+         attr（'',''）  属性名  和属性值
+         prop  对于HTML元素本身就带有的固有属性   attr  对于HTML元素我们自定义的加在标签中的属性
+         addClass（） 追加一个class名
+         removeClass（）
+         toggleClass('class') 来回切换class
+         innerWidth（）  元素的宽度包含padding
+         outerWidth（） 元素的宽度 包含padding border
+         offset（{left：20，top：20}） 相对于可视区   .left
+         position（）     
+         scrollTop（）
+         A.append（B）  向指定元素内部后面插入节点 A的内部后边插入B
+         appendTo（contet） 把指定元素移入到contet内部后面nt 
+         prepend（）前面
+         prependTo（）
+         after（） 外部的后面插入
+         before（）      前面
+         wrap（） 向每个指定元素包裹一层HTML
+         wrapAll（） 把每个元素的集合当成一个整体  
+         unwrap（） 移除指定元素的包裹
+         wrapInner（） 制定元素内部的内容包裹一层
+         clone（）  复制  为空不能复制事件  true能复制事件
+         remove（）  为空时 删除指定元素 参数：id='box'
+         detach（） 删除指定元素 保留事件
+        .bind（'事件'，function(){})  给对象添加一个或者多个事件
+        .unbind('事件')  删除事件 没参数时删除所有的
+        .ready（fn） 当DOM加载完后触发
+        .hover(function(){},function(){})   结合了mouseenter          mouseleave
+         hover（fn，fn）
+         toggle（fn，fn）
+         show（执行时间） 显示 宽高和位置变0
+         hide（执行时间） 隐藏  slow600 normal400 fast200
+             toggle（）显示隐藏来回切换
+         slideDown（执行时间） 放下来 
+         slideUp（执行时间）收上去    只改变高度
+            slidetoggle（） 卷滑动切换
+         fadeIn（）淡入 显示
+         fadeOut（） 淡出 隐藏
+             fadeToggle（）
+         fadeTo（执行时间，到多少透明度）
+         animate（{css样式}，执行时间，回掉函数function（）{}）
+         queue（function（）{$(this).dequeue}）  
+         stop（是否清空未执行的动画，是否跳转到末状态）
+         delay（延迟时间）
+         $.fx.interval=    默认13 越小越流畅
+         $.trim(str) 去掉前后空格
+         $.makeArray(obj)  创建数组
+         $.each（arr，function（index，value）{}）遍历数组
+         $.grep（arr，function（element，index）{return}）
+         $.map
+           inArray（想要查找的值，数组） 返回下标
+           merge（arr1，arr2）合并两个数组
+           unique
+        event.stopPropagation()  阻止当前事件冒泡
+               
+        请求返回的数据、响应状态字符串、jqXHR对象
+
+
+
+
+  
