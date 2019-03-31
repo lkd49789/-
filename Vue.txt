@@ -1,42 +1,26 @@
-v-pre 跳过编译 输出原始的值
-v-once 只渲染一次
-[v-cloak]{
-    display: none;
-}
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
 
-生命周期
-beforeCreate（创建前）,
+vue create my-project
+# OR
+vue ui
 
-created（创建后）,
 
-beforeMount(载入前),
 
-mounted（载入后）,
 
-beforeUpdate（更新前）,
 
-updated（更新后）,
+npm install -g @vue/cli-init
+# `vue init` 的运行效果将会跟 `vue-cli@2.x` 相同
+vue init webpack my-project
 
-beforeDestroy（销毁前）,
 
-destroyed（销毁后）
 
-Vue.directive('指令的名字',{
-	bind:function(el,binding){//被绑定
-	   /*el:元素  binding*/
-          el.style='color:'+binding.value;
-           console.log('1 - bind');
-        },
-        inserted:function(){//绑定到节点
-           console.log('2 - inserted');
-        },
-        update:function(){//组件更新
-           console.log('3 - update');
-        },
-        componentUpdated:function(){//组件更新完成
-           console.log('4 - componentUpdated');
-        },
-        unbind:function(){//解绑
-           console.log('5 - unbind');
+
+'/mm':{
+        target:'http://analysis.51macc.com',
+        changeOrigin:true,
+        pathRewrite:{
+          '^/mm':'/'
         }
-})
+      }

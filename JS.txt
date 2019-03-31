@@ -9,6 +9,9 @@ onselectstart="return false"禁止选中
 oncontextmenu=self.event.returnValue=false 禁止右键
 writing-mode: vertical-lr 垂直排列
 3e2，是计算机表示方法，就是3x10^2
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+	判断是否为手机
+}
 ES6 export   export.default   import
 /*获取图片实际宽高*/
 function getImageWidth(url,callback){
@@ -177,7 +180,9 @@ while(判断){} 先去判断条件语句  为true时执行  false直接跳出循环 执行下面的
 for(var i=1;i<100;i++){}  在循环体内结束循环  出现死循环可以用 break结束  跳出整个循环体  
                                                              continue结束本次循环 进行下一次循环
 表格 rows[0]  第一行  cells[0] 第一列  先行后列
-
+var a='7'
+padStart()用于头部补全，padEnd()用于尾部补全
+a.padstart(2,'0')-->07
 函数
 参数一一对应进行专递  实参小于形参  形参默认以undefined  实参大于形参  自动忽略多出的实参
 return 返回值  后面的语句不会执行  没有返回值时默认返回undefind 一般return放在最后
@@ -198,9 +203,9 @@ arguments[0] 调用第一个实参
 array.length数组名.长度
 
 for in
-数组时 index in arr   json对象格式时  输出index json字符串
+数组时 index in arr    输出index  对象
 for of
-数组时 value of arr   json对象格式时  输出value  json字符串
+数组时 value of arr    输出value  json数组
 
 
 数组对象.forEach(function(item, index，参数3){
@@ -345,6 +350,7 @@ location.replace=('https://www.baidu.com/')  跳转到被堵 历史数据被替换 无法返回
 location.reload(true)  刷新
 navigator 浏览器信息
 appname浏览器名字
+document.documentElement.scrollTop 滚动条高度
 window.screenLeft  浏览器左边的距离   screenX火狐的
 window.screentop 浏览器上边的距离      screenY火狐
 window.innerwidth  浏览器可视区大小
