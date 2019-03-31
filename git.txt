@@ -16,3 +16,14 @@ git rm -r --cached 要删除的文件名
 git commit -m '叙述需要带英文'
 
 git push -u origin master //更新到github上
+
+
+
+克隆项目
+git clone 地址
+
+git pull 拉
+
+git config --global user.name "名字"
+git config --global user.email "邮箱"
+

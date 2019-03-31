@@ -14,7 +14,21 @@ npm install -g @vue/cli-init
 # `vue init` 的运行效果将会跟 `vue-cli@2.x` 相同
 vue init webpack my-project
 
+自定义插件
+install
 
+let _notify=Vue.extend(Notify)
+            let div=document.createElement('div')
+            let vm=new _notify().$mount(div)
+            document.body.appendChild(vm.$el)
+
+vuex
+npm install vuex --save
+
+axios
+npm install axios
+qs
+npm install qs 
 
 
 '/mm':{

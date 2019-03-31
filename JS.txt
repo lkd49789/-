@@ -70,6 +70,9 @@ IE=edge告诉IE使用最新的引擎渲染网页，chrome=1则可以激活Chrome Frame.
 手机顶部导航栏颜色 default（白色），可以定为black（黑色）和black-translucent（灰色半透明）
 <meta name="apple-mobile-web-app-capable" content="yes" />删除默认的苹果工具栏和菜单栏 默认显示
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
 width=device-width 可视区域的宽度，值可为数字或关键词device-width 
 initial-scale 设置页面的初始缩放值，为一个数字，可以带小数
 maximum-scale=1.0, minimum-scale=1.0;允许用户的最大,最小缩放值，为一个数字，可以带小数
@@ -191,7 +194,8 @@ var a=Math.round（3.5）   4  四舍五入
           .ceil（3.4）    4  向上取整
           .floor（3.9）   3  向下取整
           .max（3，4，5）  5  取最大
-          .mix （3，4，5） 3
+          .min （3，4，5） 3
+ Math.max.apply(Math, numbers)
           .pow（2，4）    16 x的y次幂
           .sqrt（16）      x的开平方
           .abs    绝对值
