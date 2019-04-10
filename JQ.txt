@@ -99,8 +99,23 @@ $('div').filter('.div1');//选择div标签中class属性为div1的div元素
                
         请求返回的数据、响应状态字符串、jqXHR对象
 
+$.extend({
+        
+	print1:function(name){ 
+           //print1是自己定义的函数名字，括号中的name是参数
+            
+		console.log(name)
+       
+ 	}
+    
+});
+     
+$.print1("222") ;   
+--------------------- 
 
-function ($) {
+
+
+;function ($) {
 
 $.fn.tooltip = function (options) {
 
@@ -123,6 +138,7 @@ $.fn.tooltip = function (options) {
 
   return this.each(function () {
 
+/*对所有满足的选择器注册扩展方法。*/
     // Tooltip插件代码
 
   })

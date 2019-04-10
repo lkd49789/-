@@ -1,5 +1,7 @@
 我已经过了餐桌上有只鸡就一定能吃到鸡腿的年纪.
 
+https://blog.csdn.net/ChauncyWu/article/details/82960898
+
 http://coolaf.com/ 接口测试
 https://www.showdoc.cc/web/#/ 接口文档编写
 http://open.thunderurl.com/#/ 迅雷下载
@@ -378,7 +380,24 @@ document.body.clientWidth  浏览器可视区的宽度(不包含滚动条)
 屏幕可用工作区高度： window.screen.availHeight; 
 屏幕可用工作区宽度： window.screen.availWidth;
 判断滚动条是否到底scrollTop()>=$(document).height()-$(window).height() 
-滚动地距离>=文档高度减去可视区高度
+
+// clientWidth 处理兼容性
+    function getClient() {
+        return {
+            width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+            height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        }
+    }
+    // scrollTop兼容性处理
+    function getScrollTop() {
+        return window.pageYOffset || document.documentElement.scrollTop;
+    }
+	// scrollTop兼容性处理
+    function getScrollHeight() {
+        return document.body.scrollHeight || document.documentElement.scrollHeight;
+    }
+getScrollTop() +getClient().height>=getScrollHeight()
+滚动地距离+可视区高度>=文档高度
 screen.width  屏幕分辨率
        height
 window.open('网址'，名，高，宽)

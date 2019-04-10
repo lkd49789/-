@@ -1,3 +1,4 @@
+3.x
 npm install -g @vue/cli
 # OR
 yarn global add @vue/cli
@@ -12,10 +13,19 @@ vue ui
 
 npm install -g @vue/cli-init
 # `vue init` 的运行效果将会跟 `vue-cli@2.x` 相同
+
+
+//2.x安装
+npm install -g vue-cli
+
 vue init webpack my-project
 
+
 自定义插件
-install
+var test={};
+test.install=function(){
+	
+}
 
 let _notify=Vue.extend(Notify)
             let div=document.createElement('div')
