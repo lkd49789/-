@@ -32,6 +32,10 @@ let _notify=Vue.extend(Notify)
             let vm=new _notify().$mount(div)
             document.body.appendChild(vm.$el)
 
+import test from 'test'
+
+Vue.use（test）
+
 vuex
 npm install vuex --save
 
@@ -39,6 +43,9 @@ axios
 npm install axios
 qs
 npm install qs 
+
+本地图片路径
+require(路径)
 
 
 '/mm':{

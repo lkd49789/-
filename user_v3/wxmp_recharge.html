@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>口袋鸡腿充值</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="max-age=0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="stylesheet" href="https://h5.48.cn/common/css/common_mobile_v1.css">
+    <link rel="stylesheet" href="https://h5.48.cn/2019apppage/apphelp/css/index.css">
+</head>
+
+<body>
+    <section class="wrapper">
+        <section class="info">
+            <div><label>openid:<input type="text" id="openid" name="openid" value="o8I2YjgqIlZea55IGFvIHqy0CxUw"><label></div>
+            <div><label>sale_id:<input type="text" id="saleId" name="saleId" value="1"><label></div>
+            <div><label>userId:<input type="text" id="userId" name="userId" value="830472199"><label></div>
+            <div><label>custom_price:<input type="text" id="customPrice" name="customPrice" value="0"><label></div>
+            <div><button type="button" id="btnSubmit">提交</button></div>
+        </section>
+    </section>
+    <script src="http://h5.snh48.com/pocket48/js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // alert("1");
+            //获取url中的参数
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+        //var openid = getUrlParam('openid') ;
+       // if(openid == null){
+       //     window.location.href = "http://wx.snh48.com/wx/core/auth/10?url=http://h5.snh48.com/test/wxmp_recharge.html";
+       // }
+         //  $("#openid").val(openid);
+            $("#btnSubmit").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "http://101.71.63.240/pay/api/v1/wx/mp/order/create",
+                    data: {
+                        "openid": $("#openid").val(),
+                        "sale_id": $("#saleId").val(),
+                        "userId": $("#userId").val(),
+                        "custom_price": $("#customPrice").val()
+                    },
+                    contentType: 'application/x-www-form-urlencoded',
+                    success: function(data){
+                        var wxmp = data.content.wxMp;
+                        onBridgeReady(wxmp.timeStamp, wxmp.nonceStr, wxmp.package, wxmp.paySign)
+                    }
+                });
+            });
+            function onBridgeReady(timeStamp, nonceStr, package, paySign) {
+                WeixinJSBridge.invoke(
+                    'getBrandWCPayRequest', {
+                        "appId": "wx15670746b7a7cd98",     //公众号名称，由商户传入     
+                        "timeStamp": timeStamp,         //时间戳，自1970年以来的秒数     
+                        "nonceStr": nonceStr, //随机串     
+                        "package": package,
+                        "signType": "MD5",         //微信签名方式：     
+                        "paySign": paySign //微信签名 
+                    },
+                    function (res) {
+                        if (res.err_msg == "get_brand_wcpay_request:ok") {
+                            // 使用以上方式判断前端返回,微信团队郑重提示：
+                            //res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。
+                        }
+                    });
+            }
+        });
+    </script>
+</body>

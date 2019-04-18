@@ -1,0 +1,30 @@
+192.168.4.213snh48设计素材HTML52019偶像运动会吐槽实体化
+Z:\产品策划\运营活动\2019运动线上互动\原型
+
+https://h5.48.cn/2019apppage/sports48/index1.html
+
+/SV7Ugtmu4Z5guu5cvq4gU7vsflc3NDuUsd/TPS44h3MnwXEeZbAIg==
+
+admin admin123
+
+18721430090
+qqqqqq
+
+liaokaidi  
+2a5wyAFKfJ
+
+
+口袋后台
+https://pconsole.48.cn/console/login
+master@snh48
+sb48sb48sb48@QWE
+
+
+
+/*获取用户信息*/
+var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        user_id = u_info.userInfo.userId,             //用户ID
+        encryption = u_info.token,                                             //验证Token
+        user_name = u_info.userInfo.nickname,             //用户昵称
+        user_pic = u_info.userInfo.avatar,             //头像地址
+        imei = u_info.IMEI                                                //设备号

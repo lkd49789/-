@@ -292,6 +292,7 @@ var a=new String（）
           .toLowerCase（）                                        小写
 
 var a=new Date(时间戳)
+new Date("2019/04/14 00:00:00") 时间转化为时间戳
 document.write(a.toLocaleString())把时间转换 
 toLocaleDateString();光转年月日
 toLocaleTimeString();光转时分秒
