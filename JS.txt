@@ -327,6 +327,20 @@ function getMyDate(str){
             return oTime;  
         }; 
  getNamedItem
+
+倒计时
+var days    = date / 1000 / 60 / 60 / 24;
+var daysRound   = Math.floor(days);
+var hours    = date/ 1000 / 60 / 60 - (24 * daysRound);
+var hoursRound   = Math.floor(hours);
+var minutes   = date / 1000 /60 - (24 * 60 * daysRound) - (60 * hoursRound);
+var minutesRound  = Math.floor(minutes);
+var seconds   = date/ 1000 - (24 * 60 * 60 * daysRound) - (60 * 60 * hoursRound) - (60 * minutesRound);
+var secondsRound  = Math.floor(seconds);
+var time = "倒计时"+(daysRound+"天"+hoursRound +"时"+minutesRound+"分"+secondsRound+"秒");
+
+
+
 BOM
 window.setTimeout(1,2)  1 回掉时间，要执行的函数 2时间 单位ms 单数不需要明确的写出 当达到参数2时去执行回掉函数
                         返回值是一个number的数字 每定义一个，9返回一个不同于其他定时器的值
@@ -497,14 +511,7 @@ window.getComputedStyle(div).height 获得指定div盒子的高度     高版本浏览器支持  
        Ieft
        Width   元素 代表本身的大小        clientWidth 不包含border的值、
        Height
-.parentNode  获得父级节点 和定位没关 结构有关 
-.previousElementSibling   获得兄弟级前一个节点 元素节点
-.nextElementSibling       获得兄弟级后一个节点   高版本兼容
-.previousSibing    低版本的     ||兼容  包括文本节点
-.nextSibling  包括文本节点
-+
-.firstElementChild   获得第一个孩子 
-.lastElementChild  最后一个 
+
 lastChild 属性返回指定节点的最后一个子节点 高版本的  lastChild || lastElementchild
 
 event.cancelBubble= true;用于ie的阻止冒泡事件，event.stopPropagation（）用于firefox和chrome等其他浏览器
@@ -564,6 +571,12 @@ ev.keyCode
 hasOwnProperty()函数用于指示一个对象自身(不包括原型链)是否具有指定名称的属性。如果有，返回true，否则返回false。
  
 
+  // 获取滚轮位置
+               this.height1 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+               // 文档高度
+               this.height2 = document.body.scrollHeight || document.documentElement.scrollHeight;
+               // 可视区域
+               this.height3 = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
 
 

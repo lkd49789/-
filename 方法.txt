@@ -1,0 +1,57 @@
+Ctrl + Shift + P      Capture full size screenshot 截图   
+
+ var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        var appUserInfo = {
+            "appid":u_info.userInfo.userId,             //用户ID
+            "apptoken":u_info.token,                                             //验证Token
+            "uname":u_info.userInfo.nickname,             //用户昵称
+            "avata": u_info.userInfo.avatar,             //头像地址
+            "dev_cd":u_info.IMEI,                                                //设备号
+            "bindInfo":u_info.userInfo.bindInfo                                 //绑定信息
+        }
+        if(appUserInfo.uname == null || appUserInfo.uname == undefined){
+            appUserInfo.uname = u_info.userInfo.nickName
+        }
+
+
+
+
+/*跳转方法 */
+        gotoPage:function(_url){
+            var url = _url
+            if(url.indexOf("http://")>=0 ||url.indexOf("https://")>=0){
+                
+            }else{
+                url = CONFIG.geturl()+url
+            }
+            if(checkFromNew()){
+                snhOpenNewWebview(url)
+            }else if(checkFromOld()){
+                window.web.gotoDetail(url);
+            }else{
+                window.location.href = url
+            }         
+        },
+
+/*去充值 */
+        recharge(){
+            if(checkFromNew()){
+	    		_openNativeModule("recharge/recharge")
+	    	}else{
+	    		window.web.gotoPage("recharge/detail");
+	    	}
+        },
+
+new Date("2019/5/1 20:00:00").getTime()   .replace(/-/g, "/")
+
+倒计时
+var days    = date / 1000 / 60 / 60 / 24;
+var daysRound   = Math.floor(days);
+var hours    = date/ 1000 / 60 / 60 - (24 * daysRound);
+var hoursRound   = Math.floor(hours);
+var minutes   = date / 1000 /60 - (24 * 60 * daysRound) - (60 * hoursRound);
+var minutesRound  = Math.floor(minutes);
+var seconds   = date/ 1000 - (24 * 60 * 60 * daysRound) - (60 * 60 * hoursRound) - (60 * minutesRound);
+var secondsRound  = Math.floor(seconds);
+var time = "倒计时"+(daysRound+"天"+hoursRound +"时"+minutesRound+"分"+secondsRound+"秒");
+

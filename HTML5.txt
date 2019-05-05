@@ -15,6 +15,12 @@ D3
 history.pushState(state, title, url); state:null title:null
 history.replaceState(state, title, url);
 
+flex 设置宽度 flex-shrink:0;
+
+border-width:0 .42rem .84rem;
+    border-style:solid;
+    border-color:transparent transparent #ffab47;
+
 text-indent：2em   首行缩进
 white-space: nowrap; 所有的文本都显示在这一行
 text-overflow: ellipsis; 多余的文本用省略号显示
